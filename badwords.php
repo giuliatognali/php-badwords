@@ -1,12 +1,17 @@
 <?php
 
-var_dump($_GET);
+//var_dump($_GET);
 
 $badword = $_GET['badword'];
 $text = $_GET['text-start'];
 //echo $badword;
 //echo $text;
+$length_text = strlen($text);
 
+$text_censure = str_ireplace($badword, '***', $text);
+//echo $text_censure;die;
+
+$length_text_censure = strlen($text_censure);
 ?>
 
 <!DOCTYPE html>
@@ -19,14 +24,29 @@ $text = $_GET['text-start'];
 </head>
 <body>
     <h1>Bad Words</h1>
-    <p>Parola da censurare: 
-        <?php echo $badword;
-        ?>
-    </p>
-    <p>Testo: 
+    <h2>Il nostro testo: </h2>
+        <p>
         <?php echo $text;
         ?>
     </p>
-    
+    <p>Parola da censurare: 
+
+        <?php echo $badword;
+        ?>
+    </p>
+    <p>Lunghezza del nostro testo: 
+    <?php echo $length_text;
+        ?> caratteri.
+    </p>
+    <h2>Testo censurato:</h2>
+    <p>
+    <?php echo $text_censure;
+        ?>
+    </p>
+    <p>Lunghezza del testo censurato: 
+    <?php echo $length_text_censure;
+        ?> caratteri.
+    </p>
+
 </body>
 </html>

@@ -17,7 +17,7 @@
             <input type="text" id="badword" name="badword">
         </div>
         <div>
-            <label for="text-start">Testo</label>
+            <label for="text-start">Il nostro testo</label>
             <textarea name="text-start" id="text-start" cols="30" rows="10"></textarea>
         </div>
         <button>Invio</button>
