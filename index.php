@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <!-- chiamata alla pagina badwords.php -->
+<h1>Bad Words</h1>
+<!--chiamata alla pagina badwords.php -->
     <form action="badwords.php" method="GET">
         <div>
             <label for="badword">Parola da censurare</label>
